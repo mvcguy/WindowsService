@@ -6,6 +6,7 @@ namespace WindowsService.Play1
 {
     internal static class Program
     {
+        //a simple file logger for the service
         private static readonly IServiceLogger Logger = new ServiceLoggerFileBased();
 
         /// <summary>
@@ -13,9 +14,6 @@ namespace WindowsService.Play1
         /// </summary>
         private static void Main(string[] args)
         {
-            // initialize Logging functionality
-
-
             if (Environment.UserInteractive)
             {
                 StartAsConsoleApp();
